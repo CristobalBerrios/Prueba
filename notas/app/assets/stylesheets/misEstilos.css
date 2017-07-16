@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: #C62828;
+}
+
+.card {
+	background-color: #C62828;
+}
+
+.btn-floating {
+	background-color: #C62828;
+}
+
+.btn-floating:hover{
+	background-color: #E53935;
+}
+
+.btn {
+	background-color: #C62828;
+	width: 100%;	
+}
+
+.btn:hover {
+	background-color: #E53935;
+}

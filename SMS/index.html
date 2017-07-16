@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SMS</title>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+	<div class="principal">
+		<div class="pantalla">
+			<h4>SMS</h4>
+			<p id="msj"></p>
+		</div>
+		<div class="teclado">
+			<button>1</button><button value="dos">2</button><button value="tres">3</button><br>
+			<button value="cuatro">4</button><button value="cinco">5</button><button value="seis">6</button><br>
+			<button value="siete">7</button><button value="ocho">8</button><button value="nueve">9</button>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var letras = {
+				dos:    ['A','B','C'],
+				tres:   ['D','E','F'],
+				cuatro: ['G','H','I'],
+				cinco:  ['J','K','L'],
+				seis:   ['M','N','Ñ','O'],
+				siete:  ['P','Q','R','S'],
+				ocho:   ['T','U','V'],
+				nueve:  ['W','X','Y','Z']
+			};
+			var cont = 0;
+			var letra = "";
+			$("button").click(function(){
+				
+				var num = $(this).val();
+				var msj = $('#msj').text();
+
+				if(letra != num){
+					cont = 0;
+				}
+
+				if(cont === 0){
+					letra = num;
+					cont = 0;
+					setTimeout(function(){
+						if(letra == num){
+							cont = 0;
+						}
+					},2000);
+
+				}else{
+					msj = msj.substring(0,(msj.length -1));
+				}
+
+				if(cont >= letras[num].length){
+					cont = 0;
+				}
+
+				$('#msj').text(msj + letras[num][cont]);
+				cont++;
+
+			});
+		});
+	</script>
+
+
+	
+</body>
+</html>

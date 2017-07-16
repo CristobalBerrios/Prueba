@@ -1,0 +1,28 @@
+.principal{
+	margin: 0 auto;
+	width: 200px;
+	vertical-align: middle;
+}
+
+#msj {
+	color: white;
+	margin-top: 30%;
+	font-size: small;
+}
+
+h4 {
+	color: white;
+}
+.pantalla {
+	background-color: grey;
+	width: 200px;
+	height: 100px;
+}
+
+.teclado {
+	width: 200px;
+}
+
+button {
+	width: 33%;
+}

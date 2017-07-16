@@ -1,0 +1,20 @@
+<div class="container">
+  <% @notes.each do |note| %>
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      <div class="card">
+        <div class="card-content white-text">
+          <p><%= note.texto %></p>
+          <p>Ultima modificacion: <%= note.fecha %></p>
+        </div>
+        <div class="card-action">
+          <%= link_to "Editar", edit_note_path(note)%>
+          <%= link_to "Eliminar", note, method: :delete%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%end%> 
+  <div class="fixed-action-btn"><a href="/notes/new" class="btn-floating btn-large">+</a></div>
+</div>
+
